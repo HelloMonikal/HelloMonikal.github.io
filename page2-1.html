@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=楷体');
+    </style>
+    <style>
+        .text {
+            font-family: '楷体', serif;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: floatIn 2s steps(50) forwards;
+        }
+
+        @keyframes floatIn {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <pre class="text">
+            <b>桂芷欣，你好呀</b>
+        <br>
+        <br>
+        <small >
+        &#12288;2023年2月的最后一天，晚饭点的四食堂。<br>
+        &#12288;我在窗口打完菜，找位置坐下，那时候我看见你。<br>
+        &#12288;佳人独立，落英缤纷<br>
+        &#12288;当时的我永远想象不到，十天后我会深深喜欢上这个差点就用“学姐”为理由拒绝我的<br>
+        姑娘。<br>
+        &#12288;欣，你有许多个名字，每一个都美极了。你有很多个侧写，勇敢的、自信的、自由的、<br>孤独的，性感的，可爱的，迷人的，磨人的，每一个我都喜欢极了。
+        &#12288;我们聊小说与电<br>影，自由与孤独，出世与入世，虚伪与真诚，过去与现在，艺术与生命。我从未有过<br>这样的经历，我从未感受过如此剧烈的共鸣，我从未如此轻易地爱上一个人。<br>
+
+        &#12288;絮絮叨叨很多，其实一句话就足够了:我很喜欢你，喜欢组成你的一切.<br>所有已知和未知的，所有完美的不完美<br>喜欢你的眉眼，嘴唇，身躯，灵魂。<br>
+        &#12288;我才认识你，我多希望我从很早很早以前就认识你了。<br>
+        &#12288;我喜欢你，爱上了你，这是我的命运，我感到幸福。</small>
+        <br>
+        Falling in love with you is the easiest thing I have ever done.
+        </pre>
+        <div class="button-container">
+            <a class="button" href="page1.html">Next Chapter</a>
+        </div>
+    </div>
+
+    <div class="petal-container"></div>
+    <script src="script.js"></script>
+
+    <canvas class="fireworks"
+        style="position: fixed; left: 0; top: 0; z-index: 99999999; pointer-events: none;"></canvas>
+    <script type="text/javascript" src="./js/aixin.js"></script>
+    <script type="text/javascript" src="./js/anime.min.js"></script>
+    <script type="text/javascript" src="./js/fireworks.js"></script>
+
+</body>
+
+</html>
