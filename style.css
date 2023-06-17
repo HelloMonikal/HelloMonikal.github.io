@@ -1,5 +1,5 @@
 body {
-    font-family: 'Hanuman', serif;
+    font-family:  serif;
     background-color: #4abeba;
     ;
     display: flex;
@@ -7,6 +7,11 @@ body {
     align-items: center;
     height: 100vh;
 }
+.chinese-text {
+    font-family: 'STZhongsong',  serif; 
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
 .container {
     max-width: 1000px;
@@ -21,6 +26,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 
 .button {
     padding: 10px 20px;
@@ -106,6 +112,20 @@ body {
     pointer-events: none;
     animation: fadeOut 2s infinite nonlear;
 }
+
+
+.player{
+    background-color:  #4abeba;
+    width: 250px;
+    height: 100px;
+    border-radius: 5px;
+    margin: auto;
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 @keyframes fadeOut {
     0% {

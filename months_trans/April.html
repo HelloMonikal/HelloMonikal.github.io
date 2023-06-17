@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title></title>
+    <style>
+        /* 设置整个页面为白色背景 */
+        body {
+            background-color:  #fbfbfb
+            display: flex;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* 设置大字的样式 */
+        .big-text {
+            font-family: 'STZhongsong',  serif; 
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 200px;
+            opacity: 1;
+            transition: opacity 2s;
+            color:hsl(178, 52%, 44%)
+        }
+        /* 为文本添加动画效果 */
+        .fade-out {
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+    <!-- 显示的大字 -->
+    <div class="big-text">四<br>月</div>
+
+
+    <script>
+        // 隐藏大字并显示文本
+        setTimeout(function() {
+            var bigText = document.querySelector('.big-text');
+            bigText.classList.add('fade-out');
+        }, 3.5); // 2秒后执行
+
+                // 在页面加载完成后执行
+        window.addEventListener('load', function() {
+            // 2秒后跳转到另一个页面
+            setTimeout(function() {
+                window.location.href ="../page4-1.html";
+            }, 1300);
+        });
+
+    </script>
+</body>
+</html>
