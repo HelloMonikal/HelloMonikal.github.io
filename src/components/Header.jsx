@@ -10,6 +10,9 @@ function Header({ theme, toggleTheme, language, toggleLanguage, t }) {
         if (path === '/') {
             return location.pathname === '/';
         }
+        if (path === '/blog') {
+            return location.pathname === '/blog';
+        }
         return location.pathname.startsWith(path);
     };
 
@@ -26,6 +29,12 @@ function Header({ theme, toggleTheme, language, toggleLanguage, t }) {
                     <Link
                         to="/"
                         className={isActive('/') ? 'active' : ''}
+                    >
+                        {t('nav.about')}
+                    </Link>
+                    <Link
+                        to="/blog"
+                        className={isActive('/blog') ? 'active' : ''}
                     >
                         {t('nav.blog')}
                     </Link>
@@ -46,12 +55,6 @@ function Header({ theme, toggleTheme, language, toggleLanguage, t }) {
                         className={isActive('/search') ? 'active' : ''}
                     >
                         {t('nav.search')}
-                    </Link>
-                    <Link
-                        to="/about"
-                        className={isActive('/about') ? 'active' : ''}
-                    >
-                        {t('nav.about')}
                     </Link>
                     <Link
                         to="/links"

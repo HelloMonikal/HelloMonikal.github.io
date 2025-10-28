@@ -57,7 +57,7 @@ function AppContent() {
 
   // 处理返回列表
   const handleBackToList = () => {
-    navigate('/');
+    navigate('/blog');
   };
 
   return (
@@ -74,6 +74,19 @@ function AppContent() {
         <Routes>
           <Route
             path="/"
+            element={
+              <>
+                <Helmet>
+                  <title>{t('about.title')} - {siteConfig.title}</title>
+                  <meta name="description" content="关于作者的个人信息" />
+                </Helmet>
+                <About theme={theme} t={t} />
+              </>
+            }
+          />
+
+          <Route
+            path="/blog"
             element={
               <>
                 <Helmet>
@@ -156,18 +169,6 @@ function AppContent() {
             }
           />
 
-          <Route
-            path="/about"
-            element={
-              <>
-                <Helmet>
-                  <title>{t('about.title')} - {siteConfig.title}</title>
-                  <meta name="description" content="关于作者的个人信息" />
-                </Helmet>
-                <About theme={theme} t={t} />
-              </>
-            }
-          />
 
           <Route
             path="/links"
