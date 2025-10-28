@@ -15,6 +15,7 @@ import Tags from './components/Tags';
 import { posts as rawPosts } from './data/posts';
 import { addSlugsToPost } from './utils/slug';
 import { getTranslation } from './data/i18n';
+import { siteConfig } from './data/siteConfig';
 
 // 为文章添加 slug
 const posts = addSlugsToPost(rawPosts);
@@ -76,7 +77,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>我的博客 - {t('home.title')}</title>
+                  <title>{siteConfig.title} - {t('home.title')}</title>
                   <meta name="description" content={t('home.subtitle')} />
                 </Helmet>
                 <BlogList
@@ -106,7 +107,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>{t('categories.title')} - 我的博客</title>
+                  <title>{t('categories.title')} - {siteConfig.title}</title>
                   <meta name="description" content={t('categories.subtitle')} />
                 </Helmet>
                 <Categories
@@ -124,7 +125,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>{t('tags.title')} - 我的博客</title>
+                  <title>{t('tags.title')} - {siteConfig.title}</title>
                   <meta name="description" content={t('tags.subtitle')} />
                 </Helmet>
                 <Tags
@@ -142,7 +143,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>{t('nav.search')} - 我的博客</title>
+                  <title>{t('nav.search')} - {siteConfig.title}</title>
                   <meta name="description" content={t('search.placeholder')} />
                 </Helmet>
                 <Search
@@ -160,7 +161,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>{t('about.title')} - 我的博客</title>
+                  <title>{t('about.title')} - {siteConfig.title}</title>
                   <meta name="description" content="关于作者的个人信息" />
                 </Helmet>
                 <About theme={theme} t={t} />
@@ -173,7 +174,7 @@ function AppContent() {
             element={
               <>
                 <Helmet>
-                  <title>{t('links.title')} - 我的博客</title>
+                  <title>{t('links.title')} - {siteConfig.title}</title>
                   <meta name="description" content={t('links.subtitle')} />
                 </Helmet>
                 <Links theme={theme} t={t} />
@@ -184,7 +185,7 @@ function AppContent() {
       </main>
 
       <footer className="footer">
-        <p>© 2025 我的博客. {t('footer.builtWith')}</p>
+        <p>{siteConfig.copyright} {siteConfig.title}. {t('footer.builtWith')}</p>
       </footer>
     </div>
   );
@@ -209,7 +210,7 @@ function BlogPostWrapper({ posts, onBack, theme, t }) {
   return (
     <>
       <Helmet>
-        <title>{post.title} - 我的博客</title>
+        <title>{post.title} - {siteConfig.title}</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />

@@ -7,11 +7,11 @@
 export const author = {
     // 基本信息
     name: '杜修贤',
-    avatar: '👨‍💻', // 可以是 emoji 或图片 URL
+    avatar: 'https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31m9jaesrli005paf3ev178offm3uvc8?imageView2/2/w/540/format/webp|imageMogr2/strip2', // 可以是 emoji 或图片 URL
     tagline: '热爱编程 · 持续学习 · 分享知识',
 
     // 个人简介
-    bio: `这是我的博客，只要github不倒闭，它或许就能一直存在着`,
+    bio: `这是杜修贤的博客，只要github不倒闭，它或许就能一直存在着`,
 
     // 技术栈
     skills: [

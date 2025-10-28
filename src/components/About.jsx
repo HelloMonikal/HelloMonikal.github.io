@@ -9,7 +9,13 @@ function About({ theme, t = (key) => key }) {
                 <div className="about-card">
                     <div className="about-header">
                         <div className="avatar">
-                            <div className="avatar-placeholder">{author.avatar}</div>
+                            <div className="avatar-placeholder">
+                                {author.avatar.startsWith('http') ? (
+                                    <img src={author.avatar} alt={author.name} className="avatar-image" />
+                                ) : (
+                                    author.avatar
+                                )}
+                            </div>
                         </div>
                         <h1>{t('about.title')}</h1>
                         <p className="tagline">{author.tagline}</p>

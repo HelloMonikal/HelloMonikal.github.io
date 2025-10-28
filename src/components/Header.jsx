@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { siteConfig } from '../data/siteConfig';
 import './Header.css';
 
 function Header({ theme, toggleTheme, language, toggleLanguage, t }) {
@@ -17,7 +18,7 @@ function Header({ theme, toggleTheme, language, toggleLanguage, t }) {
             <div className="header-content">
                 <div className="logo-section">
                     <Link to="/" className="logo">
-                        我的博客
+                        {siteConfig.title}
                     </Link>
                 </div>
 
