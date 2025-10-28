@@ -1,0 +1,149 @@
+.blog-post {
+    min-height: calc(100vh - 100px);
+    padding: 2rem 0;
+}
+
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-button {
+    background: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background: rgba(0, 122, 255, 0.2);
+    transform: translateX(-4px);
+}
+
+.back-button:active {
+    transform: translateX(-2px);
+}
+
+.post-article {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.blog-post.dark .post-article {
+    background: #1c1c1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.post-header {
+    margin-bottom: 2rem;
+}
+
+.post-category-badge {
+    display: inline-block;
+    background: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    color: #1d1d1f;
+    margin: 1rem 0;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.blog-post.dark .post-header h1 {
+    color: #f5f5f7;
+}
+
+.post-meta-info {
+    display: flex;
+    gap: 2rem;
+    color: #86868b;
+    font-size: 1rem;
+}
+
+.post-image-full {
+    width: 100%;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.post-image-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-body {
+    line-height: 1.8;
+    color: #1d1d1f;
+    font-size: 1.05rem;
+}
+
+.blog-post.dark .post-body {
+    color: #f5f5f7;
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+}
+
+.post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.blog-post.dark .post-footer {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.post-tags-full {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.post-tags-full .tag {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .post-article {
+        padding: 2rem 1.5rem;
+    }
+
+    .post-header h1 {
+        font-size: 2rem;
+    }
+
+    .post-image-full {
+        height: 250px;
+    }
+}
+
